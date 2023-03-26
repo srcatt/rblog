@@ -1,0 +1,11 @@
+.header {
+  position: relative;
+  height: 100vh;
+  font-size: 1.25rem;
+
+  & > * {
+    position: absolute;
+    margin: var(--margin);
+    @apply leading-compact md:leading-compact;
+  }
+}

@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rsod-fg: #ffffff;
+  --rsod-bg: #252b43;
+
+  --margin: 1.6rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--rsod-bg);
+  color: var(--rsod-fg);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--rsod-fg);
+  opacity: 0.3;
+}
+
+.section {
+  background-color: var(--rsod-bg);
+  padding: 0 var(--margin) var(--margin);
+
+  & > * + *:not(.section-title) {
+    margin-top: var(--margin);
+  }
+}
+
+.section-title {
+  @apply leading-compact;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.footer {
+  padding: var(--margin);
+}
