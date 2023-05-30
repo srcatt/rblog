@@ -3,6 +3,7 @@ import Layout from "@/components/layout";
 import PostCard from "@/components/post-card";
 import BlogPost from "@/interfaces/blog-post";
 import {getAllPosts} from "@/lib/api";
+import Gradient from "@/components/gradient";
 
 interface Props {
     allPosts: BlogPost[]
@@ -12,12 +13,13 @@ export default function Home({allPosts}: Props) {
     return (
         <Layout>
             <section className={styles.header}>
-                <h1 className="top-0 left-0 text-5xl md:text-8xl">
+                <Gradient width={1024} height={1024}/>
+                <h1 className="top-0 left-0 text-5xl md:text-8xl" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-4" data-scroll-position="top">
                     zhlee&apos;s
                     <br/>
                     blog
                 </h1>
-                <p className="top-0 right-0">
+                <p className="top-0 right-0" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="4" data-scroll-position="top">
                     in beta
                 </p>
                 <p className="bottom-0 left-0">code by zhlee<br/>powered by nextjs</p>
